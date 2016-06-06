@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maur-Store</title>
+	<meta charset="utf-8"/>
+	<link rel="shortcut icon" href="images/maur.ico" type="image/ico" />
+</head>
+<body>
+<section class="header">
+	<header>
+		<figure class="logotipo"> <!--logotipo-->
+			<img src="images/maur_store.png" width="130px" height="100px" alt="Invie logotipo"> 
+		</figure>
+		<nav class="menu">
+			<ul>
+				<li class="icon-home">
+					<a href="index.html">Home</a>
+				</li>
+				<li class="icon-catalogo">
+					<a href="catalogo.php">Catálogo</a>
+				</li>
+				<li class="icon-registro">
+					<a href="registro.html">Registro</a>
+				</li>
+				<li class="icon-login">
+					<a href="login.html">Login</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+</section>
+
+<section class="seccionform">
+	<form class="formulario" action="registro.php" method="post">
+		<h3 class="registro">Registro</h3>
+		<div class="datos">
+			<label class="icon-nombre cliente">Nombre</label>
+			<input type="text" name="Nombre" required>
+		</div>
+		<div class="datos">
+			<label class="icon-nombre apellido">Apellidos</label>
+			<input type="text" name="Apellidos" required>
+		</div>
+		<div class="datos">
+			<label class="icon-clave clave">Contraseña</label>
+			<input type="password" name="Contraseña" required>
+		</div>
+		<div class="datos">
+			<label class="icon-ubicacion ubicacion">Ciudad</label>
+			<input type="text" name="Ciudad" required>
+		</div>
+		<div class="datos">
+			<label class="icon-ubicacion estado">Estado</label>
+			<input type="text" name="Estado" required>
+		</div>
+		<div class="datos">
+			<label class="icon-lugar direccion">Dirección</label>
+			<input type="text" name="Direccion" required>
+		</div>
+		<div class="datos">
+			<label class="icon-lugar referencia">Referencia</label>
+			<input type="text" name="Referencia" required>
+		</div>
+		<div class="datos">
+			<label class="icon-email email">Email</label>
+			<input type="email" name="Email" required>
+		</div>
+		<div class="datos">
+			<label class="icon-phone phone">Teléfono</label>
+			<input type="text" name="Phone" required maxlength="12" />
+		</div>
+
+		<div >
+			<input class="boton" type="submit" name="Enviar" value="Crear Usuario"
+			required>
+		</div>
+	</form>
+</section>
+
+<link rel="stylesheet" type="text/css" href="css/store.css"/>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'><!--CDN-->	
+</body>
+</html>

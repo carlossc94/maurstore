@@ -1,9 +1,9 @@
 <?php
 
- $host_db = "localhost";
- $user_db = "root";
- $pass_db = "mysql";
- $db_name = "MaurStore";
+ $host_db = "mysql.hostinger.mx";
+ $user_db = "u539631894_root";
+ $pass_db = "greenday1994";
+ $db_name = "u539631894_maus";
  $tbl_name = "Clientes";
  
  $form_pass = $_POST['Contraseña'];

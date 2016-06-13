@@ -70,6 +70,7 @@
 }
 
 
+
 body{
 	font-family: 'Allerta', sans-serif;
 	margin: 0;
@@ -83,6 +84,34 @@ h1{
 label{
 	font-size: 25px;
 }
+
+a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+table{
+	width: 100%;
+}
+
+th{
+	background-color: #273b47;
+	color: white;
+	padding: 10px 20px;
+	text-align: left;
+}
+
+td{
+	padding: 20px;
+}
+
+table,th,td{
+	border:1px solid #273b47;
+	border-collapse: collapse;
+}
+
+
+
 
 .header{
 	background-color: #273B47;
@@ -148,7 +177,7 @@ label{
 	color: #ffffff;
 }
 
-.button, .boton, .boton-entrar{
+.button, .boton, .boton-entrar,.btn-comprar{
 	font-size: 40px;
 	border-radius: 12px;
 	border:none;
@@ -259,4 +288,127 @@ label{
 	margin-top: 15px;
 	margin-left: 190px;	
 	margin-bottom: 8px;
+}
+
+.sec-tienda{
+	display: flex;
+}
+
+.tienda, .alpha{
+	margin-left: 0px;
+    margin-top: 50px;
+    background: #FFFFFF;
+    margin-right: 33px;
+    width: auto;
+    height: 413px;
+    margin-bottom: 20px;
+}
+
+
+.producto{
+	margin-left: 5px;
+	margin-right: 5px;
+	align-items: center;
+	
+}
+
+.img{
+align-items: center;
+}
+
+.nombre-producto{
+	font-size: 20px;
+	text-align: center;
+}
+
+.talla, .precio-producto{
+	font-size: 16px;
+	text-align: center;
+}
+
+.btn-comprar{
+	font-size: 14px;
+	text-align: center;
+}
+
+select {
+	font-size: 14px;
+    padding:3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    margin-left: 1070px;
+}
+
+
+.contenedor{
+	width: 800px;
+	margin: auto;
+	position: relative;
+	background-color: #ffffff;
+}
+.tabla{
+	margin: 50px 0;
+}
+
+.btn-comprar.carrito{
+    width: 360px;
+    margin-left: 500px;
+}
+
+.talla,.talla1{
+	width: 234px;
+	display: inline-block;
+	text-align: center;
+}
+
+.talla1{
+	margin-bottom: 
+}
+.img-producto{
+	border-radius: 5%;
+}
+
+.img-producto.detalles{
+	margin-left: 180px;
+}
+
+.alpha.center{
+	margin:0 25% 0 25%;
+	width: 100%;
+	height: 530px;
+	align-content: center;
+}
+
+.talla.detalles{
+	width: 100%;
+	font-size: 18px;
+}
+
+.btn-comprar.detalles{
+	margin-bottom: 0;
+}
+
+.flex{
+display: flex;
+}
+
+.alpha{
+	
+	margin-left: 100px;
+    margin-bottom: 20px;
+    border-radius: 5%;
 }

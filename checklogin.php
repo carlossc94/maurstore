@@ -4,17 +4,7 @@ session_start();
 
 <?php
 
- $host_db = "mysql.hostinger.mx";
- $user_db = "u539631894_root";
- $pass_db = "greenday1994";
- $db_name = "u539631894_maus";
- $tbl_name = "Clientes";
-
-$conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);
-
-if ($conexion->connect_error) {
- die("La conexion falló: " . $conexion->connect_error);
-}
+include 'conexion.php';
 
 $email = $_POST['Email'];
 $password = $_POST['Contraseña'];
@@ -37,7 +27,7 @@ if ($result->num_rows === 1) {
  $_SESSION['start'] = time();
  $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
 
-header ("Location: index1.php");
+header ("Location: index.php");
 
  } else { 
  echo "Username o Password estan incorrectos.";

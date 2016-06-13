@@ -21,7 +21,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 					<a href='index.php'>Home</a>
 				</li>
 				<li class='icon-catalogo'>
-					<a href='catalogo-temp.php'>Catálogo</a>
+					<a href='catalogo.php'>Catálogo</a>
 				</li>
 				<li class='icon-carrito'>
 					<a href='carrito.php'>Carrito</a>
@@ -143,7 +143,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 					<a href='index.php'>Home</a>
 				</li>
 				<li class='icon-catalogo'>
-					<a href='catalogo-temp.php'>Catálogo</a>
+					<a href='catalogo.php'>Catálogo</a>
 				</li>
 				<li class='icon-carrito'>
 					<a href='carrito.php'>Carrito</a>

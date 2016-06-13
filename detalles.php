@@ -18,7 +18,7 @@
 					<a href='index.php'>Home</a>
 				</li>
 				<li class='icon-catalogo'>
-					<a href='catalogo-temp.php'>Catálogo</a>
+					<a href='catalogo.php'>Catálogo</a>
 				</li>
 				<li class='icon-carrito'>
 					<a href='carrito.php'>Carrito</a>
@@ -58,19 +58,8 @@
 
 		<h3 class="precio-producto" name="Precio">Precio: $<?php echo $f['Precio'];?>.00</h3>
 
-		<form action="carrito-temp.php">
-			<section class="talla detalles">
-				<input type="radio" name="tallas" value="chica">Chica
-				<input type="radio" name="tallas" value="mediana">Mediana
-				<input type="radio" name="tallas" value="grande">Grande
-				<input type="radio" name="tallas" value="extra-larga">Extra Larga<br>
-				Cantidad:
-				<input type="number" name="cantidad" min="1" max="10" class="numero"/>
-			</section>
-		</form>
 
-
-		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['id'];?>">Agregar Al Carrito</a></h4>
+		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="carrito.php?id=<?php echo $f['Id_producto'];?>">Agregar Al Carrito</a></h4>
 	</div>
 <?php	
 	}
@@ -94,19 +83,8 @@
 
 		<h3 class="precio-producto" name="Precio">Precio: $<?php echo $f['Precio'];?>.00</h3>
 
-		<form action="carrito-temp.php">
-			<section class="talla detalles">
-				<input type="radio" name="tallas" value="chica">Chica
-				<input type="radio" name="tallas" value="mediana">Mediana
-				<input type="radio" name="tallas" value="grande">Grande
-				<input type="radio" name="tallas" value="extra-larga">Extra Larga<br>
-				Cantidad:
-				<input type="number" name="cantidad" min="1" max="10" class="numero"/>
-			</section>
-		</form>
-
-
-		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['id'];?>">Agregar Al Carrito</a></h4>
+		
+		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="carrito.php?id=<?php echo $f['Id_producto'];?>">Agregar Al Carrito</a></h4>
 	</div>
 <?php	
 	}
@@ -129,19 +107,8 @@
 
 		<h3 class="precio-producto" name="Precio">Precio: $<?php echo $f['Precio'];?>.00</h3>
 
-		<form action="carrito-temp.php">
-			<section class="talla detalles">
-				<input type="radio" name="tallas" value="chica">Chica
-				<input type="radio" name="tallas" value="mediana">Mediana
-				<input type="radio" name="tallas" value="grande">Grande
-				<input type="radio" name="tallas" value="extra-larga">Extra Larga<br>
-				Cantidad:
-				<input type="number" name="cantidad" min="1" max="10" class="numero"/>
-			</section>
-		</form>
 
-
-		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['id'];?>">Agregar Al Carrito</a></h4>
+		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="carrito.php?id=<?php echo $f['Id_producto'];?>">Agregar Al Carrito</a></h4>
 	</div>
 <?php	
 	}
@@ -164,19 +131,7 @@
 
 		<h3 class="precio-producto" name="Precio">Precio: $<?php echo $f['Precio'];?>.00</h3>
 
-		<form action="carrito-temp.php">
-			<section class="talla detalles">
-				<input type="radio" name="tallas" value="chica">Chica
-				<input type="radio" name="tallas" value="mediana">Mediana
-				<input type="radio" name="tallas" value="grande">Grande
-				<input type="radio" name="tallas" value="extra-larga">Extra Larga<br>
-				Cantidad:
-				<input type="number" name="cantidad" min="1" max="10" class="numero"/>
-			</section>
-		</form>
-
-
-		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['id'];?>">Agregar Al Carrito</a></h4>
+		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="carrito.php?id=<?php echo $f['Id_producto'];?>">Agregar Al Carrito</a></h4>
 	</div>
 <?php	
 	}
@@ -199,19 +154,8 @@
 
 		<h3 class="precio-producto" name="Precio">Precio: $<?php echo $f['Precio'];?>.00</h3>
 
-		<form action="carrito-temp.php">
-			<section class="talla detalles">
-				<input type="radio" name="tallas" value="chica">Chica
-				<input type="radio" name="tallas" value="mediana">Mediana
-				<input type="radio" name="tallas" value="grande">Grande
-				<input type="radio" name="tallas" value="extra-larga">Extra Larga<br>
-				Cantidad:
-				<input type="number" name="cantidad" min="1" max="10" class="numero"/>
-			</section>
-		</form>
 
-
-		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['id'];?>">Agregar Al Carrito</a></h4>
+		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="carrito.php?id=<?php echo $f['Id_producto'];?>">Agregar Al Carrito</a></h4>
 	</div>
 <?php	
 	}
@@ -234,19 +178,8 @@
 
 		<h3 class="precio-producto" name="Precio">Precio: $<?php echo $f['Precio'];?>.00</h3>
 
-		<form action="carrito-temp.php">
-			<section class="talla detalles">
-				<input type="radio" name="tallas" value="chica">Chica
-				<input type="radio" name="tallas" value="mediana">Mediana
-				<input type="radio" name="tallas" value="grande">Grande
-				<input type="radio" name="tallas" value="extra-larga">Extra Larga<br>
-				Cantidad:
-				<input type="number" name="cantidad" min="1" max="10" class="numero"/>
-			</section>
-		</form>
 
-
-		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['id'];?>">Agregar Al Carrito</a></h4>
+		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="carrito.php?id=<?php echo $f['Id_producto'];?>">Agregar Al Carrito</a></h4>
 	</div>
 <?php	
 	}
@@ -269,19 +202,8 @@
 
 		<h3 class="precio-producto" name="Precio">Precio: $<?php echo $f['Precio'];?>.00</h3>
 
-		<form action="carrito-temp.php">
-			<section class="talla detalles">
-				<input type="radio" name="tallas" value="chica">Chica
-				<input type="radio" name="tallas" value="mediana">Mediana
-				<input type="radio" name="tallas" value="grande">Grande
-				<input type="radio" name="tallas" value="extra-larga">Extra Larga<br>
-				Cantidad:
-				<input type="number" name="cantidad" min="1" max="10" class="numero"/>
-			</section>
-		</form>
 
-
-		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['id'];?>">Agregar Al Carrito</a></h4>
+		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="carrito.php?id=<?php echo $f['Id_producto'];?>">Agregar Al Carrito</a></h4>
 	</div>
 <?php	
 	}
@@ -304,19 +226,8 @@
 
 		<h3 class="precio-producto" name="Precio">Precio: $<?php echo $f['Precio'];?>.00</h3>
 
-		<form action="carrito-temp.php">
-			<section class="talla detalles">
-				<input type="radio" name="tallas" value="chica">Chica
-				<input type="radio" name="tallas" value="mediana">Mediana
-				<input type="radio" name="tallas" value="grande">Grande
-				<input type="radio" name="tallas" value="extra-larga">Extra Larga<br>
-				Cantidad:
-				<input type="number" name="cantidad" min="1" max="10" class="numero"/>
-			</section>
-		</form>
 
-
-		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['id'];?>">Agregar Al Carrito</a></h4>
+		<h4 class="btn-comprar detalles" onclick='showHide()'><a href="carrito.php?id=<?php echo $f['Id_producto'];?>">Agregar Al Carrito</a></h4>
 	</div>
 <?php	
 	}

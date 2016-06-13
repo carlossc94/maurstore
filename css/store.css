@@ -412,3 +412,19 @@ display: flex;
     margin-bottom: 20px;
     border-radius: 5%;
 }
+
+.producto-carrito{
+	background-color: #ffffff;
+}
+
+.btn-comprar.detalles.carrito{
+	width: 630px;
+}
+
+.btn-comprar.detalles.carrito.comprar{
+	background:green;
+}
+
+.btn-comprar.detalles.carrito.cancelar{
+	background:red;
+}

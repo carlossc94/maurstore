@@ -18,7 +18,7 @@ $result = $conexion->query($sql);
 
 
 if ($result->num_rows === 1) {
- $row = $result->fetch_array(MYSQLI_ASSOC); 
+ $row = $result->fetch_array(); 
  
  if ($contraencrip==$row['Password']) { 
  

@@ -39,7 +39,9 @@
 		</div>
 </section>
 
-<section class="sec-tienda">
+<section class="sec-tienda det" style="
+    display: flex;
+">
 
 <?php 
 	include 'conexion.php';

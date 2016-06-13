@@ -18,7 +18,7 @@
 					<a href='index.php'>Home</a>
 				</li>
 				<li class='icon-catalogo'>
-					<a href='catalogo-temp.php'>Catálogo</a>
+					<a href='catalogo.php'>Catálogo</a>
 				</li>
 				<li class='icon-carrito'>
 					<a href='carrito.php'>Carrito</a>
@@ -45,9 +45,10 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class=flex>
-	<div class="alpha">
-		<figure class="producto">
+
+<section class="flex >
+	<div class="alpha cat">
+		<figure class="producto cat">
 			<img src='images/Sudaderas/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
 		</figure>
 		<div class="guardar-prod">
@@ -58,10 +59,11 @@
 		<h4 class="btn-comprar" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['Id_producto'];?>">Ver Detalles</a></h4>
 	</div>
 </section>
+</section>
 <?php	
 	}
 ?>
-
+<section class="sec-tienda">
 <?php 
 	include 'conexion.php';
 	$tipo="Camisas";
@@ -69,8 +71,8 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class=flex>
-	<div class="alpha">
+<section class="flex cat">
+	<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Camisas/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
 		</figure>
@@ -82,10 +84,12 @@
 		<h4 class="btn-comprar" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['Id_producto'];?>">Ver Detalles</a></h4>
 	</div>
 </section>
+</section>
 <?php	
 	}
 ?>
 
+<section class="sec-tienda">
 <?php 
 	include 'conexion.php';
 	$tipo="Accesorios";
@@ -93,8 +97,8 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class=flex>
-	<div class="alpha">
+<section class="flex cat">
+	<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Accesorios/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
 		</figure>
@@ -106,10 +110,11 @@
 		<h4 class="btn-comprar" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['Id_producto'];?>">Ver Detalles</a></h4>
 	</div>
 </section>
+</section>
 <?php	
 	}
 ?>
-
+<section class="sec-tienda">
 <?php 
 	include 'conexion.php';
 	$tipo="Deportivas";
@@ -117,8 +122,8 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class=flex>
-<div class="alpha">
+<section class="flex cat">
+<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Deportivas/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
 		</figure>
@@ -130,10 +135,11 @@
 		<h4 class="btn-comprar" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['Id_producto'];?>">Ver Detalles</a></h4>
 	</div>
 </section>
+</section>
 <?php	
 	}
 ?>
-
+<section class="sec-tienda">
 <?php 
 	include 'conexion.php';
 	$tipo="Playeras";
@@ -141,8 +147,8 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class=flex>
-	<div class="alpha">
+<section class="flex cat">
+	<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Playeras/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
 		</figure>
@@ -154,10 +160,11 @@
 		<h4 class="btn-comprar" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['Id_producto'];?>">Ver Detalles</a></h4>
 	</div>
 </section>
+</section>
 <?php	
 	}
 ?>
-
+<section class="sec-tienda">
 <?php 
 	include 'conexion.php';
 	$tipo="Trajes";
@@ -165,8 +172,8 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class=flex>
-	<div class="alpha">
+<section class="flex cat">
+	<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Trajes/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
 		</figure>
@@ -178,10 +185,11 @@
 		<h4 class="btn-comprar" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['Id_producto'];?>">Ver Detalles</a></h4>
 	</div>
 </section>
+</section>
 <?php	
 	}
 ?>
-
+<section class="sec-tienda">
 <?php 
 	include 'conexion.php';
 	$tipo="Trajesplaya";
@@ -189,8 +197,8 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class=flex>
-	<div class="alpha">
+<section class="flex cat">
+	<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Trajesplaya/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
 		</figure>
@@ -202,10 +210,11 @@
 		<h4 class="btn-comprar" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['Id_producto'];?>">Ver Detalles</a></h4>
 	</div>
 </section>
+</section>
 <?php	
 	}
 ?>
-
+<section class="sec-tienda">
 <?php 
 	include 'conexion.php';
 	$tipo="Pantalones";
@@ -213,8 +222,8 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class=flex>
-	<div class="alpha">
+<section class="flex cat">
+	<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Pantalones/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
 		</figure>
@@ -225,6 +234,7 @@
 		<h3 class="precio-producto" name="Precio">Precio: $<?php echo $f['Precio'];?>.00</h3>
 		<h4 class="btn-comprar" onclick='showHide()'><a href="detalles.php?id=<?php echo $f['Id_producto'];?>">Ver Detalles</a></h4>
 	</div>
+</section>
 </section>
 <?php	
 	}
@@ -276,7 +286,7 @@
 </section>
 
 <section class="sec-tienda">
-	<div class="alpha">
+	<div class="alpha cat">
 		<figure class="producto">
 			<img src="images/Sudaderas/Sudadera_AeropostaleNegro.jpg" width="250px" height="270px">
 		</figure>

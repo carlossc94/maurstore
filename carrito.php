@@ -137,8 +137,10 @@ $total=($datos[$i]['Cantidad']*$datos[$i]['Precio'])+$total;
 
 	echo "<center><h2>Total: ".$total."</h2></center>";
 ?>
-	<h4 class="btn-comprar detalles carrito comprar" onclick="myFunction()"><a href="carrito.php">Confirmar Compra</a></h4>
-	<h4 class="btn-comprar detalles carrito cancelar" onclick='showHide()'><a href="carrito.php">Cancelar Compra</a></h4>
+
+	<h6>*El pago de sus productos es exclusivo y personal en la entrega, Proximamente se Implementará el pago con tarjeta</h6>
+	<h4 class="btn-comprar detalles carrito comprar" onclick="myFunction()">Confirmar Compra</h4>
+	<h4 class="btn-comprar detalles carrito cancelar" onclick="myFunction1()">Cancelar Compra</h4>
 	</section> 
 
 
@@ -152,11 +154,16 @@ function myFunction() {
     var txt;
     var r = confirm("Esta Confirmando Su Pedido!");
     if (r == true) {
-        txt = "You pressed OK!";
-    } else {
-        txt = "You pressed Cancel!";
+        window.location.href='confirmacion.php';
     }
-    document.getElementById("demo").innerHTML = txt;
+}
+
+function myFunction1() {
+    var txt;
+    var r = confirm("Eliminara Su Pedido!");
+    if (r == true) {
+        window.location.href='restore.php';
+    }
 }
 </script>
 </body>

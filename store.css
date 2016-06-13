@@ -294,6 +294,7 @@ h6{
 
 .sec-tienda{
 	display: inline-block;
+	flex:none;
 }
 
 .tienda, .alpha{
@@ -405,11 +406,11 @@ select {
 }
 
 .flex{
-display: flex;
+display: inline-block;
 }
 
 .alpha{
-	
+	width: 262px;
 	margin-left: 100px;
     margin-bottom: 20px;
     border-radius: 5%;
@@ -431,12 +432,4 @@ display: flex;
 .btn-comprar.detalles.carrito.cancelar{
 	background:red;
 	margin-left: 350px;
-}
-
-.sec-tienda.cat{
-	display: inline-block;
-}
-
-.sec-tienda.det{
-	display: flex;
 }

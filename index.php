@@ -41,14 +41,14 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 		<h1 class='titulo'>MaurStore</h1>  <!--Titulo-->
 		<h3 class='title-a'>Viste Siempre A La Moda</h3> <!--Resumen-->
 		<h3 class='title-b'>Todo En Ropa Para Caballero</h3>
-		<a class='button'>Conoce más</a><!--Boton-->
+		<a class='button' href='#ropas'>Conoce más</a><!--Boton-->
 	</div>
 	<div class='background'>
 	</div>
 	
 </section>
 
-<section class='demo'>
+<section class='demo' id='ropas'>
 	<div class='p'>
 		<figure>
 			<img src='images/pantalon1.png' width='212px' height='250px'>

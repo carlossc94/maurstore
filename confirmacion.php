@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+
 define('FPDF_FONTPATH','fonts');
 require('fpdf.php');
 
@@ -121,5 +125,8 @@ $pdf->SetFont('Times','',12);
     /*$pdf->Cell(110,110,'Gracias Por Su Compra ',0,1);*/
 $pdf->Output();
 
-
+}
+else{
+    header("location:login.html");
+}
 ?>

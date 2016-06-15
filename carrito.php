@@ -188,9 +188,6 @@ if($ID){
 	<div id="cancelar" style='display:block;'>
 		<h4 class="btn-comprar detalles carrito cancelar" onclick="myFunction1()" >Cancelar Compra</h4>
 	</div>
-	<div id="seguir" style='display:none;'>
-		<h4 class="btn-comprar detalles carrito seguir" onclick="catalogo()" >Continuar Comprando</h4>
-	</div>
 	</section> 
 
 	<?php

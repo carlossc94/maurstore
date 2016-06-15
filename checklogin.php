@@ -23,7 +23,7 @@ if ($result->num_rows === 1) {
  if ($contraencrip==$row['Password']) { 
  
  $_SESSION['loggedin'] = true;
- $_SESSION['email'] = $row['Nombre'];
+ $_SESSION['email'] = $row['Email'];
  $_SESSION['start'] = time();
  $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
 

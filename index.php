@@ -51,29 +51,41 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 <section class='demo' id='ropas'>
 	<div class='p'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/pantalon1.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Pantalones</p>
 	</div>
 
 	<div class='t'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/Imagen2.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Trajes</p>
 	</div>
 
 	<div class='pl'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/playera1.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Playeras</p>
 	</div>
 
 	<div class='c'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/camisa1.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Camisas</p>
 	</div>
 </section>
@@ -81,29 +93,41 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 <section class='demo1'>
 	<div class='ci'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/cinturon.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Cinturones</p>
 	</div>
 
 	<div class='sud'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/sudadera.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Sudaderas</p>
 	</div>
 
 	<div class='traban'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/trajebanio.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Traje De Baño</p>
 	</div>
 
 	<div class='rd'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/ropadep.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Ropa Deportivas</p>
 	</div>
 
@@ -174,29 +198,41 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 <section class='demo' id='conoce-mas'>
 	<div class='p'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/pantalon1.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Pantalones</p>
 	</div>
 
 	<div class='t'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/Imagen2.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Trajes</p>
 	</div>
 
 	<div class='pl'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/playera1.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Playeras</p>
 	</div>
 
 	<div class='c'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/camisa1.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Camisas</p>
 	</div>
 </section>
@@ -204,29 +240,41 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 <section class='demo1'>
 	<div class='ci'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/cinturon.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Cinturones</p>
 	</div>
 
 	<div class='sud'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/sudadera.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Sudaderas</p>
 	</div>
 
 	<div class='traban'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/trajebanio.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Traje De Baño</p>
 	</div>
 
 	<div class='rd'>
 		<figure>
+		<a href=catalogo.php>
 			<img src='images/ropadep.png' width='212px' height='250px'>
+		</a>
 		</figure>
+
 		<p class='nombre'>Ropa Deportivas</p>
 	</div>
 

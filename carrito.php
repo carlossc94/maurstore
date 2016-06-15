@@ -63,7 +63,7 @@ else{
 	<meta charset='utf-8'/>
 	<link rel='shortcut icon' href='images/maur.ico' type='image/ico' />
 </head>
-<body>
+<body onload="esconde()">
 <section class='header'>
 	<header>
 		<figure class='logotipo'> <!--logotipo-->
@@ -77,12 +77,32 @@ else{
 				<li class='icon-catalogo'>
 					<a href='catalogo.php'>Catálogo</a>
 				</li>
+				<?php 
+					if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+						echo "
+						<li class='icon-carrito'>
+						<a href='carrito.php'>Carrito</a>
+						</li>
+						<li class='icon-login'>
+							<a href='logout.php'>
+							Salir
+							</a>
+						</li>" ;
+					}
+					else{
+						echo "<li class='icon-carrito'>
+					<a href='carrito.php'>Carrito</a>
+				</li>
 				<li class='icon-catalogo'>
 					<a href='registro.html'>Registro</a>
 				</li>
 				<li class='icon-login'>
 					<a href='login.html'>
 					Login
+					</a>
+				</li>";
+					}
+				?>
 					</a>
 				</li>
 			</ul>
@@ -95,7 +115,7 @@ else{
 $total=0;
 	if(isset($_SESSION['carrito'])){
 		$datos=$_SESSION['carrito'];
-
+	
 		?>
 <table>
 			<thead>
@@ -126,22 +146,56 @@ $total=0;
 
 <?php
 $total=($datos[$i]['Cantidad']*$datos[$i]['Precio'])+$total;
+
+$Name=$datos[$i]['Nombre'];
+$Size='UNITALLA';
+$Cant=$datos[$i]['Cantidad'];
+$precio=$datos[$i]['Precio'];
+$Subto=$datos[$i]['Cantidad']*$datos[$i]['Precio'];
+$ID=$_GET['id'];
+	
+if($ID){
+	$borrado="DELETE FROM Compras WHERE ID_Producto=$ID";
+	//Almacenamiento Temporal para Crear EL Comprobante
+	mysqli_query($conexion, $borrado);
+	$comprobante="INSERT INTO Compras (Nombre,Talla,Cantidad,Precio,Subtotal,ID_Producto) VALUES ('$Name','$Size','$Cant','$precio','$Subto','$ID')";
+	mysqli_query($conexion, $comprobante);
+	//Almacenamiento Permanente
+	$borrado2="DELETE FROM Permanente WHERE ID_Producto=$ID";
+	mysqli_query($conexion, $borrado2);
+	$almacenamiento="INSERT INTO Permanente (Nombre,Talla,Cantidad,Precio,Subtotal,ID_Producto) SELECT Nombre,Talla,Cantidad,Precio,Subtotal,ID_Producto FROM Compras WHERE ID_Producto=$ID" ;
+	mysqli_query($conexion, $almacenamiento);
+
+	}
 }
 ?>
 </table>
 <?php
 	
 	}else{
-		echo '<center><h2>El Carrito De Compras Esta Vacio</h2></center>';
+		echo '<div id="vacio"><center><h2>El Carrito De Compras Esta Vacio</h2></center></div>';
 	}
 
 	echo "<center><h2>Total: ".$total."</h2></center>";
+
+
 ?>
 
 	<h6>*El pago de sus productos es exclusivo y personal en la entrega, Proximamente se Implementará el pago con tarjeta</h6>
-	<h4 class="btn-comprar detalles carrito comprar" onclick="myFunction()">Confirmar Compra</h4>
-	<h4 class="btn-comprar detalles carrito cancelar" onclick="myFunction1()">Cancelar Compra</h4>
+	<div id="confirmar" style='display:block;'>
+		<h4 class="btn-comprar detalles carrito comprar" onclick="myFunction()" >Confirmar Compra</h4>
+	</div>
+	<div id="cancelar" style='display:block;'>
+		<h4 class="btn-comprar detalles carrito cancelar" onclick="myFunction1()" >Cancelar Compra</h4>
+	</div>
+	<div id="seguir" style='display:none;'>
+		<h4 class="btn-comprar detalles carrito seguir" onclick="catalogo()" >Continuar Comprando</h4>
+	</div>
 	</section> 
+
+	<?php
+	
+	?>
 
 
 <footer>
@@ -150,6 +204,16 @@ $total=($datos[$i]['Cantidad']*$datos[$i]['Precio'])+$total;
 
 <link rel='stylesheet' type='text/css' href='css/store.css'/>
 <script>
+function esconde(){
+	if(document.getElementById("vacio")){
+	document.getElementById("confirmar").style.display = 'none';
+	document.getElementById("cancelar").style.display = 'none';
+	}
+	else{
+		document.getElementById("seguir").style.display = 'block';
+	}
+}
+
 function myFunction() {
     var txt;
     var r = confirm("Esta Confirmando Su Pedido!");
@@ -165,6 +229,7 @@ function myFunction1() {
         window.location.href='restore.php';
     }
 }
+
 </script>
 </body>
 </html>

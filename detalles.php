@@ -1,4 +1,6 @@
-<?php header("Content-Type: text/html;charset=utf-8");?>
+<?php 
+session_start();
+header("Content-Type: text/html;charset=utf-8");?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +22,20 @@
 				<li class='icon-catalogo'>
 					<a href='catalogo.php'>Catálogo</a>
 				</li>
-				<li class='icon-carrito'>
+				<?php 
+					if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+						echo "
+						<li class='icon-carrito'>
+						<a href='carrito.php'>Carrito</a>
+						</li>
+						<li class='icon-login'>
+							<a href='logout.php'>
+							Salir
+							</a>
+						</li>";
+					}
+					else{
+						echo "<li class='icon-carrito'>
 					<a href='carrito.php'>Carrito</a>
 				</li>
 				<li class='icon-catalogo'>
@@ -30,7 +45,9 @@
 					<a href='login.html'>
 					Login
 					</a>
-				</li>
+				</li>";
+					}
+				?>
 			</ul>
 		</nav>
 	</header>

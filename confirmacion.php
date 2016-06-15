@@ -2,7 +2,30 @@
 session_start();
 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+echo "<!DOCTYPE html>
+<html>
+<head>
+    <title>Maur-Store</title>
+    <meta charset='utf-8'/>
+    <link rel='shortcut icon' href='images/maur.ico' type='image/ico' />
+</head>
+<body>
+<section class='header'>
+<center>GRACIAS POR SU COMPRA</center><BR>
+<center>EN UN MOMENTO SE LE REDIRECCIONARA A SU COMPROBANTE DE COMPRA</center><BR>
+</section>
 
+<footer>
+    
+</footer>
+
+<link rel='stylesheet' type='text/css' href='css/store.css'/>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'><!--CDN--> 
+
+
+</body>
+</html>";
+/*
 define('FPDF_FONTPATH','fonts');
 require('fpdf.php');
 
@@ -122,8 +145,8 @@ $pdf = new PDF();
 $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->SetFont('Times','',12);
-    /*$pdf->Cell(110,110,'Gracias Por Su Compra ',0,1);*/
-$pdf->Output();
+    /*$pdf->Cell(110,110,'Gracias Por Su Compra ',0,1);
+$pdf->Output();*/
 
 }
 else{

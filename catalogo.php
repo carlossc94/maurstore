@@ -1,4 +1,7 @@
-<?php header("Content-Type: text/html;charset=utf-8");?>
+<?php 
+session_start();
+header("Content-Type: text/html;charset=utf-8");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +23,21 @@
 				<li class='icon-catalogo'>
 					<a href='catalogo.php'>Catálogo</a>
 				</li>
-				<li class='icon-carrito'>
+
+				<?php 
+					if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+						echo "
+						<li class='icon-carrito'>
+						<a href='carrito.php'>Carrito</a>
+						</li>
+						<li class='icon-login'>
+							<a href='logout.php'>
+							Salir
+							</a>
+						</li>";
+					}
+					else{
+						echo "<li class='icon-carrito'>
 					<a href='carrito.php'>Carrito</a>
 				</li>
 				<li class='icon-catalogo'>
@@ -30,7 +47,11 @@
 					<a href='login.html'>
 					Login
 					</a>
-				</li>
+				</li>";
+					}
+				?>
+
+				
 			</ul>
 		</nav>
 	</header>
@@ -46,7 +67,7 @@
 	while ($f=mysqli_fetch_array($result)) {
 ?>
 
-<section class="flex >
+<section class="flex-cat" >
 	<div class="alpha cat">
 		<figure class="producto cat">
 			<img src='images/Sudaderas/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
@@ -71,7 +92,7 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class="flex cat">
+<section class="flex-cat">
 	<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Camisas/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
@@ -97,7 +118,7 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class="flex cat">
+<section class="flex-cat">
 	<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Accesorios/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
@@ -122,7 +143,7 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class="flex cat">
+<section class="flex-cat">
 <div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Deportivas/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
@@ -147,7 +168,7 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class="flex cat">
+<section class="flex-cat">
 	<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Playeras/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
@@ -172,7 +193,7 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class="flex cat">
+<section class="flex-cat">
 	<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Trajes/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
@@ -197,7 +218,7 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class="flex cat">
+<section class="flex-cat">
 	<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Trajesplaya/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
@@ -222,7 +243,7 @@
 	$result = $conexion->query($producto);
 	while ($f=mysqli_fetch_array($result)) {
 ?>
-<section class="flex cat">
+<section class="flex-cat">
 	<div class="alpha cat">
 		<figure class="producto">
 			<img src='images/Pantalones/<?php echo $f['Imagen'];?>' class="img-producto" width="250px" height="270px ">
@@ -241,81 +262,7 @@
 ?>
 
 
-<!--
-	<div class="tienda">
-		<figure class="producto">
-			<img class="img" src="images/Camisas/camisa_negra.jpg" width="250px" height="270px">
-		</figure>
-		<div class="guardar-prod">
-			<h2 class="nombre-producto">Camisa Color Negra</h2>
-			<form action="">
-				<section class="talla1">
-					<input type="radio" name="tallas" value="chica">Chica
-					<input type="radio" name="tallas" value="mediana">Mediana
-					<input type="radio" name="tallas" value="grande">Grande
-				</section>
-			</form>
-		</div>
-		<h3 class="precio-producto">Precio: $280.00</h3>
-		<h4 class="btn-comprar " ><a href="">comprar</a></h4>
-	</div>
 
-	<div class="tienda">
-		<figure class="producto">
-			<img src="images/playeras/playera_capitanamerica_azul.jpg" width="250px" height="270px">
-		</figure>
-		<div class="guardar-prod">
-			<h2 class="nombre-producto">Playera Cápitan América</h2>
-			<h3 class="talla">Tallas Disponibles: Ch, M, Gde, XL</h3>
-		</div>
-		<h3 class="precio-producto">Precio: $300.00</h3>
-		<h4 class="btn-comprar"><a href="">comprar</a></h4>
-	</div>
-
-	<div class="tienda">
-		<figure class="producto">
-			<img src="images/Deportivas/deportiva_nike_blanca.jpg" width="250px" height="270px">
-		</figure>
-		<div class="guardar-prod">
-			<h2 class="nombre-producto">Deportiva Blanca Nike</h2>
-			<h3 class="talla">Tallas Disponibles: Ch, M, Gde</h3>
-		</div>
-		<h3 class="precio-producto">Precio: $350.00</h3>
-		<h4 class="btn-comprar"><a href="">comprar</a></h4>
-	</div>
-</section>
-
-<section class="sec-tienda">
-	<div class="alpha cat">
-		<figure class="producto">
-			<img src="images/Sudaderas/Sudadera_AeropostaleNegro.jpg" width="250px" height="270px">
-		</figure>
-		<div class="guardar-prod">
-			<h2 class="nombre-producto">Sudadera Aeropostale</h2>
-			<h3 class="talla">Tallas Disponibles: Ch, M, Gde, XL</h3>
-		</div>
-		<h3 class="precio-producto">Precio: $185.00</h3>
-		<h4 class="btn-comprar"><a href="">comprar</a></h4>
-	</div>
-
-	<div class="tienda">
-		<figure class="producto">
-			<img src="images/Camisas/camisa_negra.jpg" width="250px" height="270px">
-		</figure>
-	</div>
-
-	<div class="tienda">
-		<figure class="producto">
-			<img src="images/playeras/playera_capitanamerica_azul.jpg" width="250px" height="270px">
-		</figure>
-	</div>
-
-	<div class="tienda">
-		<figure class="producto">
-			<img src="images/Deportivas/deportiva_nike_blanca.jpg" width="250px" height="270px">
-		</figure>
-	</div>
-	-->
 </section>
 
 <footer>

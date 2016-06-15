@@ -433,10 +433,11 @@ display: flex;
 	margin-left: 350px;
 }
 
-.sec-tienda.cat{
-	display: inline-block;
+.btn-comprar.detalles.carrito.seguir{
+	background:blue;
+	margin-left: 350px;
 }
 
-.sec-tienda.det{
-	display: flex;
+.flex-cat{
+	display: inline-block;
 }

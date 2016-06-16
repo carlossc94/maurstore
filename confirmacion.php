@@ -40,6 +40,8 @@ setTimeout ("redireccionar()", 2000); //tiempo expresado en milisegundos
 </script>
 </head>
 <body>
+
+<center><a href="index.php" style="text-decoration:underline">Regresar al Inicio</a></center>
 </body>
 </html>
 <?php

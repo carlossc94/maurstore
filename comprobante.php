@@ -65,8 +65,10 @@ while($f=mysqli_fetch_array($result)){
 	$pdf->Cell(30,5,$f['Cantidad'],1,0,'C');
 	$pdf->Cell(30,5,$f['Precio'],1,0,'C');
 	$pdf->Cell(30,5,$f['Subtotal'],1,1,'C');
-
+	$total=$total+($f['Subtotal']);
 }
+
+$pdf->Cell(0,25,"Su Pago Es De:  ".$total,0,1,'C');
 
 $pdf->SetFont('Arial','B',25);
 $pdf->Cell(0,25,'Gracias Por Su Compra ',0,1,'C');
@@ -76,8 +78,11 @@ $pdf->Cell(0,25,'*Muestre Este Comprobante Al Momento De Entrega',0,1,'C');
 
 //Datos dle titulos
 
-
+$final="DELETE FROM Compras";
+mysqli_query($conexion,$final);
+unset ($_SESSION['carrito']);
 $pdf->Output('D','ComprobanteDePago.pdf');
+
 }
 else{
 	header("location:index.php");
